@@ -1,7 +1,9 @@
 :root{
     --main-body: radial-gradient(circle,rgba(200, 0, 220, 1) 0%, rgba(0, 0, 0, 1) 58%);
     --main-text: rgba(220, 220, 220, 1);
-    --menu-body: rgba(0,0,0,0.5);
+    --menu-body: rgba(0,0,0,0.8);
+    --logo-bg: rgba(255, 171, 0, 1);
+    --logo-main: rgba(0,0,0,1);
 } 
 
 *{
@@ -63,6 +65,7 @@ body{
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 999;
 }
 
 .menu-list{
@@ -101,6 +104,98 @@ body{
 
 .menu-list li:hover::after{
     transform: scale(1);
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.category{
+    padding: 2rem 10rem !important;
+}
+
+.row{
+    display: flex !important;
+    flex-direction: row !important;
+}
+
+.grid{
+    display: grid !important;
+    grid-template-columns: repeat(12, 1fr) !important;
+}
+
+.grid-col-2{
+    grid-column: auto / span 5;
+}
+
+.grid-col-3{
+    grid-column: auto / span 4;
+}
+
+.grid-col-4{
+    grid-column: auto / span 3;
+}
+
+.grid-col-5{
+    grid-column: auto / span 2;
+}
+
+.grid-col-1{
+    grid-column: auto / span 6;
+}
+
+.grid-col-6{
+    grid-column: auto / span 1;
+}
+
+.product-image{
+    width: 100%;
+}
+
+.product-desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-header{
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+    text-align: center;
+}
+
+.text-right{
+    text-align: right !important;
+}
+
+.text-left{
+    text-align: start !important;
+}
+
+.btn{
+    margin: 2rem 1rem;
+    align-self: center;
+    justify-self: center;
+    padding: 0.25rem 4rem;
+    border-radius: 100dvw;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn-product{
+    background-color: var(--logo-bg);
+    color: var(--logo-main);
+    transition-duration: 500ms;
+}
+
+.btn-product:hover{
+    background-color: var(--logo-main);
+    color: var(--logo-bg);
 }
 
 @keyframes slideIn {
